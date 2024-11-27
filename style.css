@@ -151,4 +151,75 @@ a {
 .game:hover {
   transform: scale(1.08);
   transition: transform 0.3s ease;
+}
+
+.mini-game-box {
+  height: 3500px;
+  background: #202027;
+  background-image: url(img/star-mini1.svg), url(img/star-mini2.svg);
+  background-position: calc(100% - 80px) calc(100% - 3299px), calc(100% - 80px) calc(100% - 45px);
+  background-repeat: no-repeat;
+}
+.mini-game-box__title {
+  color: #FFF;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 46px;
+  padding-bottom: 72px;
+}
+.mini-game-box__content {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.mini-game {
+  width: 1200px;
+  border-radius: 30px;
+  background: #FFF;
+  display: flex;
+}
+.mini-game__info {
+  padding: 48px;
+  width: 504px;
+}
+.mini-game__title {
+  color: #202027;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.mini-game__text {
+  color: #202027;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 133.333% */
+  padding-top: 24px;
+  padding-bottom: 36px;
+}
+.mini-game__button {
+  border-radius: 60px;
+  background: #202027;
+  width: 247px;
+  height: 66px;
+  color: #FFF;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 141.688%; /* 34.005px */
+}
+.mini-game__button:hover {
+  background: #fff;
+  color: #202027;
+}
+.mini-game__img {
+  border-radius: 30px;
+}
+.mini-game__two {
+  flex-direction: row-reverse;
 }/*# sourceMappingURL=style.css.map */
