@@ -222,4 +222,19 @@ a {
 }
 .mini-game__two {
   flex-direction: row-reverse;
+}
+
+.footer {
+  height: 150px;
+  background: #BDED35;
+}
+.footer__text {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-top: 61px;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
