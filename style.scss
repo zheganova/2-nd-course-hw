@@ -25,7 +25,6 @@ a {
     background-repeat: no-repeat;
 
     &__title {
-        width: 769px;
         color: #202027;
         font-size: 64px;
         font-style: normal;
@@ -36,13 +35,16 @@ a {
     }
 
     &__text {
-        width: 720px;
         color: #202027;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: 32px; /* 133.333% */
         padding-bottom: 48px;
+    }
+
+    &-mobile__text {
+        display: none;
     }
 
     &__button {
@@ -247,6 +249,10 @@ a {
         padding-bottom: 36px;
     }
 
+    &-mobile__text {
+        display: none;
+    }
+
     &__button {
         border-radius: 60px;
         background: #202027;
@@ -289,3 +295,5 @@ a {
         justify-content: center;
     }
 }
+
+@import 'mobile';
