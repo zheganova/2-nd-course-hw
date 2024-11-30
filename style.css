@@ -304,6 +304,7 @@ a {
   }
   .mini-game-box__content {
     gap: 24px;
+    justify-content: center;
   }
   .mini-game {
     width: 343px;
