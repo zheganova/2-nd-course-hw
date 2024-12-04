@@ -48,6 +48,9 @@ a {
     }
 
     &__button {
+        display: inline-block;
+        box-sizing: border-box;
+        padding-top: 16px;
         width: 247px;
         height: 66px;
         border-radius: 60px;
@@ -64,18 +67,6 @@ a {
 
     &__button_mobile{
         display: none;
-        width: 247px;
-        height: 66px;
-        border-radius: 60px;
-        border: 1px solid #202027;
-        background: #202027;
-        color: #FFF;
-        text-align: center;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 141.688%; /* 34.005px */
-        margin-bottom: 156px;
     }
 
     &__button:hover {
@@ -114,6 +105,18 @@ a {
         display: flex;
         gap: 32px;
         flex-wrap: wrap;
+    }
+
+    &__line1 {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+    }
+    
+    &__line2 {
+        display: flex;
+        align-items: flex-end;
+        gap: 32px;
     }
 }
 
@@ -170,18 +173,6 @@ a {
 
    &_size3 {
         height: 551px;
-   }
-
-   &__line1 {
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-   }
-
-   &__line2 {
-    display: flex;
-    align-items: flex-end;
-    gap: 32px;
    }
 
    &:hover {

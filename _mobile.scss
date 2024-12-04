@@ -35,8 +35,6 @@
             color: #202027;
             text-align: center;
             font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
             line-height: normal;
             padding-bottom: 36px;
         }
@@ -97,26 +95,17 @@
         &__text {
             color: #000;
             font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
             line-height: normal;
             padding-top: 16px;
             padding-bottom: 32px;
         }
 
-        &_text6 {
+        &__text_text6 {
             display: none;
         }
 
         &__text_mobile {
             display: block;
-            color: #000;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            padding-top: 16px;
-            padding-bottom: 32px;
         }
 
         &__button {

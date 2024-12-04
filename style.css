@@ -44,6 +44,9 @@ a {
   display: none;
 }
 .top__button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-top: 16px;
   width: 247px;
   height: 66px;
   border-radius: 60px;
@@ -59,18 +62,6 @@ a {
 }
 .top__button_mobile {
   display: none;
-  width: 247px;
-  height: 66px;
-  border-radius: 60px;
-  border: 1px solid #202027;
-  background: #202027;
-  color: #FFF;
-  text-align: center;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 141.688%; /* 34.005px */
-  margin-bottom: 156px;
 }
 .top__button:hover {
   background: #FFF;
@@ -105,6 +96,16 @@ a {
   display: flex;
   gap: 32px;
   flex-wrap: wrap;
+}
+.game-box__line1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+.game-box__line2 {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
 }
 
 .game {
@@ -153,16 +154,6 @@ a {
 }
 .game_size3 {
   height: 551px;
-}
-.game__line1 {
-  display: flex;
-  align-items: flex-start;
-  gap: 32px;
-}
-.game__line2 {
-  display: flex;
-  align-items: flex-end;
-  gap: 32px;
 }
 .game:hover {
   transform: scale(1.08);
@@ -291,8 +282,6 @@ a {
     color: #202027;
     text-align: center;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: normal;
     padding-bottom: 36px;
   }
@@ -343,24 +332,15 @@ a {
   .mini-game__text {
     color: #000;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: normal;
     padding-top: 16px;
     padding-bottom: 32px;
   }
-  .mini-game_text6 {
+  .mini-game__text_text6 {
     display: none;
   }
   .mini-game__text_mobile {
     display: block;
-    color: #000;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-top: 16px;
-    padding-bottom: 32px;
   }
   .mini-game__button {
     width: 285px;
