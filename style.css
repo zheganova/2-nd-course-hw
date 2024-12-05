@@ -40,10 +40,13 @@ a {
   line-height: 32px; /* 133.333% */
   padding-bottom: 48px;
 }
-.top-mobile__text {
+.top__text_mobile {
   display: none;
 }
 .top__button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-top: 16px;
   width: 247px;
   height: 66px;
   border-radius: 60px;
@@ -56,6 +59,9 @@ a {
   font-weight: 600;
   line-height: 141.688%; /* 34.005px */
   margin-bottom: 156px;
+}
+.top__button_mobile {
+  display: none;
 }
 .top__button:hover {
   background: #FFF;
@@ -90,6 +96,16 @@ a {
   display: flex;
   gap: 32px;
   flex-wrap: wrap;
+}
+.game-box__line1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+.game-box__line2 {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
 }
 
 .game {
@@ -130,24 +146,14 @@ a {
 .game__img {
   border-radius: 30px;
 }
-.game__size1 {
+.game_size1 {
   height: 473px;
 }
-.game__size2 {
+.game_size2 {
   height: 512px;
 }
-.game__size3 {
+.game_size3 {
   height: 551px;
-}
-.game__line1 {
-  display: flex;
-  align-items: flex-start;
-  gap: 32px;
-}
-.game__line2 {
-  display: flex;
-  align-items: flex-end;
-  gap: 32px;
 }
 .game:hover {
   transform: scale(1.08);
@@ -202,7 +208,7 @@ a {
   padding-top: 24px;
   padding-bottom: 36px;
 }
-.mini-game-mobile__text {
+.mini-game__text_mobile {
   display: none;
 }
 .mini-game__button {
@@ -224,7 +230,7 @@ a {
 .mini-game__img {
   border-radius: 30px;
 }
-.mini-game__two {
+.mini-game_two {
   flex-direction: row-reverse;
 }
 
@@ -271,17 +277,19 @@ a {
   .top__text {
     display: none;
   }
-  .top-mobile__text {
+  .top__text_mobile {
     display: block;
     color: #202027;
     text-align: center;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: normal;
     padding-bottom: 36px;
   }
   .top__button {
+    display: none;
+  }
+  .top__button_mobile {
+    display: block;
     width: 285px;
     height: 55px;
     font-size: 16px;
@@ -324,24 +332,15 @@ a {
   .mini-game__text {
     color: #000;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: normal;
     padding-top: 16px;
     padding-bottom: 32px;
   }
-  .mini-game__text6 {
+  .mini-game__text_text6 {
     display: none;
   }
-  .mini-game-mobile__text {
+  .mini-game__text_mobile {
     display: block;
-    color: #000;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-top: 16px;
-    padding-bottom: 32px;
   }
   .mini-game__button {
     width: 285px;

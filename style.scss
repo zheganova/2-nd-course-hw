@@ -43,11 +43,14 @@ a {
         padding-bottom: 48px;
     }
 
-    &-mobile__text {
+    &__text_mobile {
         display: none;
     }
 
     &__button {
+        display: inline-block;
+        box-sizing: border-box;
+        padding-top: 16px;
         width: 247px;
         height: 66px;
         border-radius: 60px;
@@ -62,32 +65,14 @@ a {
         margin-bottom: 156px;
     }
 
+    &__button_mobile{
+        display: none;
+    }
+
     &__button:hover {
         background: #FFF;
         color: #000;
     }
-
-    // &__runway {
-    //     height: 50px;
-    //     background: #BCEC30;
-    //     display: inline-flex;
-    //     padding: 27px 49px;
-    //     flex-direction: row;
-    //     align-items: center;
-    //     gap: 51px;
-    //     overflow: hidden;
-    // }
-
-    // &__runway_text {
-    //     color: #202027;
-    //     font-size: 30px;
-    //     font-style: normal;
-    //     font-weight: 700;
-    //     line-height: 110%; /* 33px */
-    //     letter-spacing: 1.2px;
-    //     text-transform: uppercase;
-    //     white-space: nowrap; /* Запрещаем перенос текста на новую строку */
-    // }
 }
 
 .game-box {
@@ -120,6 +105,18 @@ a {
         display: flex;
         gap: 32px;
         flex-wrap: wrap;
+    }
+
+    &__line1 {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+    }
+    
+    &__line2 {
+        display: flex;
+        align-items: flex-end;
+        gap: 32px;
     }
 }
 
@@ -166,28 +163,16 @@ a {
         border-radius: 30px;
    }
 
-   &__size1 {
+   &_size1 {
         height: 473px;
    }
 
-   &__size2 {
+   &_size2 {
         height: 512px;
    }
 
-   &__size3 {
+   &_size3 {
         height: 551px;
-   }
-
-   &__line1 {
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-   }
-
-   &__line2 {
-    display: flex;
-    align-items: flex-end;
-    gap: 32px;
    }
 
    &:hover {
@@ -249,7 +234,7 @@ a {
         padding-bottom: 36px;
     }
 
-    &-mobile__text {
+    &__text_mobile {
         display: none;
     }
 
@@ -275,7 +260,7 @@ a {
         border-radius: 30px;
     }
 
-    &__two {
+    &_two {
         flex-direction: row-reverse;
     }
 }
