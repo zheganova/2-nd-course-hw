@@ -30,3 +30,41 @@ function startGame1() {
         }
     }
 }
+
+function startGame2() {
+
+    alert(`Привет! Давай порешаем арифметические задачки!`);
+
+    while(true) {
+
+        let num1 = getRandomNumber();
+        let num2 = getRandomNumber();
+
+        const operations = [
+            { symbol: '+', result: num1 + num2 },
+            { symbol: '-', result: num1 - num2 },
+            { symbol: '*', result: num1 * num2 },
+            { symbol: '/', result: (num1 / num2).toFixed(2) } // Округляем результат деления до 2 знаков
+        ];
+        
+        const randomOperation = operations[Math.floor(Math.random() * 4)];
+
+        let answer = prompt(`${num1} ${randomOperation.symbol} ${num2} = `);
+
+        if (answer === null) {
+            alert(`Игра завершена. Ты вышел.`);
+            break;
+        }
+
+        if (isNaN(answer)) {
+            alert(`Пожалуйста, введи корректное число.`);
+            continue; 
+        }
+
+        if(answer == randomOperation.result) {
+            alert(`Да, верно!`);
+        }else{
+            alert(`Ответ неверный. Правильный ответ: ${randomOperation.result}`);
+        }
+    }
+}
