@@ -68,3 +68,69 @@ function startGame2() {
         }
     }
 }
+
+function startGame3() {
+
+    alert(`Привет! Твоя задача написать любой текст, а я переверну его. Сыграем?`);
+
+    while(true) {
+        let answer = prompt(`Введи текст:`);
+
+        if (answer === null) {
+            alert(`Игра завершена. Ты вышел.`);
+            break;
+        }
+
+        let answerNew = answer.toLowerCase().split('').reverse().join('');
+        alert(answerNew);
+    }
+}
+
+function startGame4() {
+
+    alert(`Привет! Сейчас ты поучаствуешь в викторине. Поехали!`);
+
+    const quiz = [
+        {
+            question: "Какого цвета небо?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2 // номер правильного ответа
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+
+    let n = 0;
+
+    for(let i = 0; i < quiz.length; i++){
+        let answer = prompt(`${quiz[i].question}\n${quiz[i].options}\nВведи номер правильного ответа:`);
+
+        if (answer === null) {
+            alert(`Игра завершена. Ты вышел.`);
+            return;
+        }
+
+        if (isNaN(answer)) {
+            alert(`Пожалуйста, введи корректное число.`);
+            i--; // Повторяем текущий вопрос
+            continue; 
+        }
+
+        if(Number(answer) === quiz[i].correctAnswer) {
+            alert(`Правильно!`);
+            n++;
+        }else{
+            alert(`Неправильно. Правильный ответ: ${quiz[i].correctAnswer}`);
+        }
+    }
+
+    alert(`Викторина подошла к концу. Количество правильных ответов: ${n}. Спасибо за игру!`);
+}
