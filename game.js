@@ -134,3 +134,50 @@ function startGame4() {
 
     alert(`Викторина подошла к концу. Количество правильных ответов: ${n}. Спасибо за игру!`);
 }
+
+function startGame5() {
+
+    alert(`Привет! Давай сыграем в "Камень, ножницы, бумага"!`);
+
+    const choice = ["Камень", "Ножницы", "Бумага"];
+
+    while(true){
+        let answer = prompt(`${choice.join(", ")}\nВыбери:`);
+
+        if (answer === null) {
+            alert(`Игра завершена. Ты вышел.`);
+            return;
+        }
+    
+        // Приводим выбор пользователя к нижнему регистру
+        answer = answer.toLowerCase();
+    
+        // Проверяем, что выбор пользователя допустим
+        if (!choice.map(c => c.toLowerCase()).includes(answer)) {
+            alert("Некорректный выбор. Попробуй ещё раз.");
+            continue;
+        }
+    
+         function comp() {
+            const randomIndex = Math.floor(Math.random() * 3);
+            return choice[randomIndex].toLowerCase();
+        }
+    
+        const computerChoice = comp();
+    
+        alert(`Ты выбрал: ${answer}\nКомпьютер выбрал: ${computerChoice}`);
+    
+        // Определяем победителя
+        if (answer === computerChoice) {
+            alert("Ничья!");
+        } else if (
+            (answer === "камень" && computerChoice === "ножницы") ||
+            (answer === "ножницы" && computerChoice === "бумага") ||
+            (answer === "бумага" && computerChoice === "камень")
+        ) {
+            alert("Ты победил!");
+        } else {
+            alert("Ты проиграл!");
+        }
+    }
+}
