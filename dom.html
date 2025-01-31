@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Задание1 -->
+    <h1 class="title">Hello, World!</h1>
+    <button class="change-text">Скрыть</button>
+
+    <!-- Задание2 -->
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatum culpa doloremque, odit ipsum vitae aspernatur harum cumque voluptatem, est ea magni alias inventore eaque laudantium placeat esse nostrum voluptatibus.</p>
+    <button class="btn">Изменить цвет</button>
+
+    <!-- Задание3 -->
+    <h1 class="title-two">Здравствуйте</h1>
+    <button class="btn-two">Изменить текст</button>
+
+    <!-- Задание4 -->
+    <p class="description">Это первый элемент</p>
+    <p class="description">Это второй элемент</p>
+    <p class="description">Это третий элемент</p>
+
+    <!-- Задание5 -->
+    <p class="descrip">Это первый параграф</p>
+    <p class="textic">Это второй параграф</p>
+    <p class="descrip">Это третий параграф</p>
+    <p class="cotic">Это четвертый параграф</p>
+    <p class="descrip">Это пятый параграф</p>
+
+    <!-- Задание6 -->
+     <button class="btn-three">Добавить элемент</button>
+
+    <!-- Задание7 -->
+    <p class="descriptionS">Это первый текст</p>
+    <p class="cool">Это второй текст</p>
+    <p class="descriptionS">Это третий текст</p>
+    <p class="good">Это четвертый текст</p>
+    <p class="descriptionS">Это пятый текст</p>
+    <button class="btn-four">Удалить элемент</button>
+
+    <script>
+        // Задание 1
+        const titleEl = document.querySelector('.title');
+        const ButtonEl = document.querySelector('.change-text');
+
+        ButtonEl.addEventListener('click', () => {
+            if (titleEl.style.display === 'none') {
+                titleEl.style.display = 'block'; // Показываем заголовок
+            } else {
+                titleEl.style.display = 'none'; // Скрываем заголовок
+            }
+        });
+
+        // Задание 2
+        const textEl = document.querySelector('.text');
+        const btnEl = document.querySelector('.btn');
+
+        btnEl.addEventListener('click', () => {
+            textEl.style.color = 'blue';
+        });
+
+        // Задание 3
+        const titleTwoEl = document.querySelector('.title-two');
+        const btnTwoEl = document.querySelector('.btn-two');
+
+        btnTwoEl.addEventListener('click', () => {
+            titleTwoEl.textContent = 'Привет, мир!';
+        });
+
+        // Задание 4
+        const descriptionsEl = document.querySelectorAll('.description');
+
+        descriptionsEl.forEach(elements => {
+            elements.textContent = 'Измененный текст';
+        });
+
+        // Задание 5
+        const descripEl = document.querySelectorAll('.descrip');
+
+        descripEl.forEach(elements => {
+            elements.textContent = 'Новый текст';
+        });
+
+        // Задание 6
+        const btnThreeEl = document.querySelector('.btn-three');
+
+        btnThreeEl.addEventListener('click', () => {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'Новый абзац';
+            newParagraph.classList = 'newP';
+            document.body.appendChild(newParagraph);
+        });
+
+        // Задание 7
+        const btnFourEl = document.querySelector('.btn-four');
+        const descriptionSEl = document.querySelector('.descriptionS');
+
+        btnFourEl.addEventListener('click', () => {
+            descriptionSEl.remove();
+        });
+
+    </script>
+</body>
+</html>
