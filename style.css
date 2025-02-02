@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,8 @@ a {
   background-image: url(img/star1.svg), url(img/star2.svg), url(img/star3.svg);
   background-position: 63px 69px, calc(100% + 482px) 100%, calc(100% - 344px) calc(100% - 149px);
   background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
 }
 .top__title {
   color: #202027;
@@ -66,6 +69,36 @@ a {
 .top__button:hover {
   background: #FFF;
   color: #000;
+}
+.top__runway {
+  height: 50px;
+  background: #BCEC30;
+  display: flex;
+  padding: 27px 49px;
+  flex-direction: row;
+  align-items: center;
+  gap: 51px;
+  animation: scroll 10s infinite linear;
+  position: absolute;
+  left: 0;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Двигаем влево */
+  }
+}
+.top__runway-text {
+  color: #202027;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 33px */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  white-space: nowrap; /* Запрещаем перенос текста на новую строку */
 }
 
 .game-box {

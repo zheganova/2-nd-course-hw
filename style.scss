@@ -23,6 +23,8 @@ a {
     background-image: url(img/star1.svg), url(img/star2.svg), url(img/star3.svg);
     background-position: 63px 69px, calc(100% + 482px) calc(100%), calc(100% - 344px) calc(100% - 149px);
     background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
 
     &__title {
         color: #202027;
@@ -74,27 +76,38 @@ a {
         color: #000;
     }
 
-    // &__runway {
-    //     height: 50px;
-    //     background: #BCEC30;
-    //     display: inline-flex;
-    //     padding: 27px 49px;
-    //     flex-direction: row;
-    //     align-items: center;
-    //     gap: 51px;
-    //     overflow: hidden;
-    // }
+    &__runway {
+        height: 50px;
+        background: #BCEC30;
+        display: flex;
+        padding: 27px 49px;
+        flex-direction: row;
+        align-items: center;
+        gap: 51px;
+        animation: scroll 10s infinite linear;
+        position: absolute;
+        left: 0;
+    }
 
-    // &__runway-text {
-    //     color: #202027;
-    //     font-size: 30px;
-    //     font-style: normal;
-    //     font-weight: 700;
-    //     line-height: 110%; /* 33px */
-    //     letter-spacing: 1.2px;
-    //     text-transform: uppercase;
-    //     white-space: nowrap; /* Запрещаем перенос текста на новую строку */
-    // }
+    @keyframes scroll {
+        0% {
+            transform: translateX(0); 
+        }
+        100% {
+            transform: translateX(-100%); /* Двигаем влево */
+        }
+    }
+
+    &__runway-text {
+        color: #202027;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%; /* 33px */
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+    }
 }
 
 .game-box {
