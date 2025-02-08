@@ -49,6 +49,22 @@
             height: 55px;
             font-size: 16px;
         }
+
+        &__runway {
+            bottom: 0;
+            height: 28px;
+            padding: 16px 24px;
+            gap: 27px;
+        }
+
+        &__runway-text {
+            font-size: 16px;
+        }
+
+        &__runway-img {
+            height: 19px;
+            width: 19px;
+        }
     }
 
     .game-box {

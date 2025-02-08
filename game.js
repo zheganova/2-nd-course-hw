@@ -2,6 +2,8 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
 }
 
+
+// Игра 1 //
 function startGame1() {
     const num = getRandomNumber();
 
@@ -31,6 +33,7 @@ function startGame1() {
     }
 }
 
+// Игра 2 //
 function startGame2() {
 
     alert(`Привет! Давай порешаем арифметические задачки!`);
@@ -69,6 +72,7 @@ function startGame2() {
     }
 }
 
+// Игра 3 //
 function startGame3() {
 
     alert(`Привет! Твоя задача написать любой текст, а я переверну его. Сыграем?`);
@@ -86,6 +90,7 @@ function startGame3() {
     }
 }
 
+// Игра 4 //
 function startGame4() {
 
     alert(`Привет! Сейчас ты поучаствуешь в викторине. Поехали!`);
@@ -135,6 +140,7 @@ function startGame4() {
     alert(`Викторина подошла к концу. Количество правильных ответов: ${n}. Спасибо за игру!`);
 }
 
+// Игра 5 //
 function startGame5() {
 
     alert(`Привет! Давай сыграем в "Камень, ножницы, бумага"!`);
@@ -181,3 +187,25 @@ function startGame5() {
         }
     }
 }
+
+// Игра 6 //
+
+const changeBackgroundBtn = document.getElementById('changeBackgroundBtn');
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+function changeBackgroundColor() {
+    const randomColor = getRandomColor();
+    const gamesSection = document.getElementById('game'); 
+    const miniGameBox = document.querySelector('.mini-game-box'); 
+
+    gamesSection.style.backgroundColor = randomColor; 
+    miniGameBox.style.backgroundColor = randomColor; 
+}
+
+changeBackgroundBtn.addEventListener('click', changeBackgroundColor);
