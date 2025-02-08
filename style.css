@@ -73,14 +73,16 @@ a {
 .top__runway {
   height: 50px;
   background: #BCEC30;
-  display: flex;
   padding: 27px 49px;
   flex-direction: row;
   align-items: center;
-  gap: 51px;
-  animation: scroll 10s infinite linear;
   position: absolute;
   left: 0;
+}
+.top__runway-content {
+  display: flex;
+  gap: 51px;
+  animation: scroll 15s infinite linear;
 }
 @keyframes scroll {
   0% {
@@ -139,6 +141,10 @@ a {
   display: flex;
   align-items: flex-end;
   gap: 32px;
+}
+
+.game-box__content-tablet {
+  display: none;
 }
 
 .game {
@@ -282,6 +288,88 @@ a {
   justify-content: center;
 }
 
+@media (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
+  }
+  .top__title {
+    font-size: 56px;
+  }
+  .top__runway {
+    bottom: 0;
+  }
+  .game-box {
+    height: 2048px;
+  }
+  .game-box__content {
+    display: none;
+  }
+  .game-box__content-tablet {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  .game {
+    width: 354px;
+  }
+  .mini-game-box {
+    height: 6200px;
+  }
+  .mini-game-box__title {
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .mini-game-box__content {
+    gap: 32px;
+    justify-content: center;
+  }
+  .mini-game {
+    width: 686px;
+    flex-direction: column-reverse;
+  }
+  .mini-game__info {
+    width: 560px;
+    padding: 48px;
+  }
+  .mini-game__title {
+    color: #202027;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .mini-game__text {
+    color: #000;
+    font-size: 24px;
+    line-height: normal;
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+  .mini-game__text_text6 {
+    display: none;
+  }
+  .mini-game__text_mobile {
+    display: block;
+  }
+  .mini-game__button {
+    width: 285px;
+    height: 66px;
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 141.688%; /* 22.67px */
+  }
+}
 @media (max-width: 767px) {
   .center {
     padding-left: 16px;

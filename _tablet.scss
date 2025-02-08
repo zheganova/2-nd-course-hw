@@ -1,0 +1,100 @@
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+    .top {
+        &__title {
+            font-size: 56px;
+        }
+
+        &__runway {
+            bottom: 0;
+        }
+    }
+
+    .game-box {
+            height: 2048px;
+
+            &__content {
+                display: none;
+            }
+
+            &__content-tablet {
+                display: block;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px;
+                justify-content: center;
+            }
+    }
+
+    .game {
+        width: 354px;
+    }
+
+    .mini-game-box {
+        height: 6200px;
+
+        &__title {
+            color: #FFF;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        &__content {
+            gap: 32px;
+            justify-content: center;
+        }
+    }
+
+    .mini-game {
+        width: 686px;
+        flex-direction: column-reverse;
+
+        &__info {
+            width: 560px;
+            padding: 48px;
+        }
+
+        &__title {
+            color: #202027;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        &__text {
+            color: #000;
+            font-size: 24px;
+            line-height: normal;
+            padding-top: 16px;
+            padding-bottom: 32px;
+        }
+
+        &__text_text6 {
+            display: none;
+        }
+
+        &__text_mobile {
+            display: block;
+        }
+
+        &__button {
+            width: 285px;
+            height: 66px;
+            color: #FFF;
+            text-align: center;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 141.688%; /* 22.67px */
+        }
+    }    
+}

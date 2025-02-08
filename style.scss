@@ -79,14 +79,17 @@ a {
     &__runway {
         height: 50px;
         background: #BCEC30;
-        display: flex;
         padding: 27px 49px;
         flex-direction: row;
         align-items: center;
-        gap: 51px;
-        animation: scroll 10s infinite linear;
         position: absolute;
         left: 0;
+    }
+
+    &__runway-content {
+        display: flex;
+        gap: 51px;
+        animation: scroll 15s infinite linear;
     }
 
     @keyframes scroll {
@@ -153,6 +156,10 @@ a {
         align-items: flex-end;
         gap: 32px;
     }
+}
+
+.game-box__content-tablet {
+    display: none;
 }
 
 .game {
@@ -316,4 +323,5 @@ a {
     }
 }
 
+@import 'tablet';
 @import 'mobile';
