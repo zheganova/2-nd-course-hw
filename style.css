@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -261,6 +262,7 @@ a {
   font-style: normal;
   font-weight: 600;
   line-height: 141.688%; /* 34.005px */
+  font-family: inherit;
 }
 .mini-game__button:hover {
   background: #fff;
